@@ -42,3 +42,28 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Social Media Icons */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    background: #333;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #555;
+    transform: scale(1.1);
+}

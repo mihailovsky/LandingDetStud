@@ -16,38 +16,58 @@
 </head>
 <body>
 
-    <!-- Language Switcher -->
-    <div class="container mt-3 text-end">
-        <select id="language-switcher" class="form-select w-auto">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="ru">Русский</option>
-            <option value="uk">Українська</option>
-        </select>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 data-i18n="header_title">Auto Detailing Studio</h1>
+            <select id="language-switcher" class="form-select w-auto">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="ru">Русский</option>
+                <option value="uk">Українська</option>
+            </select>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1 data-i18n="hero_title">Premium Auto Detailing Services</h1>
-        <p data-i18n="hero_desc">We provide high-quality detailing for all types of vehicles.</p>
-        <button class="btn btn-primary btn-lg" data-i18n="hero_cta">Book Now</button>
+        <div class="container text-center">
+            <h2 data-i18n="hero_title">Premium Auto Detailing Services</h2>
+            <p data-i18n="hero_desc">We provide high-quality detailing for all types of vehicles.</p>
+            <button class="btn btn-primary btn-lg" data-i18n="hero_cta">Book Now</button>
+        </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Tabs -->
     <section class="services container">
         <h2 class="text-center mt-4" data-i18n="services_title">Our Services</h2>
-        <div class="row text-center mt-3">
-            <div class="col-md-3 col-sm-6">
-                <p data-i18n="service1">Exterior Wash & Wax</p>
+        <ul class="nav nav-tabs" id="serviceTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#exterior" data-i18n="tab1">Exterior</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#interior" data-i18n="tab2">Interior</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#ceramic" data-i18n="tab3">Ceramic Coating</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#paint" data-i18n="tab4">Paint Protection</a>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+            <div id="exterior" class="tab-pane fade show active">
+                <p data-i18n="service1_desc">Complete exterior detailing including wash, wax, and polishing.</p>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <p data-i18n="service2">Interior Deep Cleaning</p>
+            <div id="interior" class="tab-pane fade">
+                <p data-i18n="service2_desc">Deep cleaning of seats, carpets, dashboard, and air vents.</p>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <p data-i18n="service3">Ceramic Coating</p>
+            <div id="ceramic" class="tab-pane fade">
+                <p data-i18n="service3_desc">Long-lasting ceramic coating to protect your car’s paint.</p>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <p data-i18n="service4">Paint Correction</p>
+            <div id="paint" class="tab-pane fade">
+                <p data-i18n="service4_desc">Paint correction and scratch removal for a flawless look.</p>
             </div>
         </div>
     </section>
@@ -62,6 +82,7 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>

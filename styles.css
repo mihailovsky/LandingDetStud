@@ -53,6 +53,39 @@ body {
     background: #007bff;
 }
 
+
+/* Transparent Dropdown */
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.8); /* Transparent black */
+    border: none;
+    min-width: 50px;
+}
+
+/* Dropdown items (flags only) */
+.dropdown-item {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flag icons */
+.flag-icon {
+    font-size: 24px;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .hero h2 {

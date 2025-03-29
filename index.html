@@ -17,17 +17,24 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 data-i18n="header_title">Auto Detailing Studio</h1>
-            <select id="language-switcher" class="form-select w-auto">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="ru">Русский</option>
-                <option value="uk">Українська</option>
-            </select>
+<header class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 data-i18n="header_title">Auto Detailing Studio</h1>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+            <button class="btn dropdown-toggle lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                <span class="flag-icon flag-icon-gb"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item lang-option" data-lang="en"><span class="flag-icon flag-icon-gb"></span></a></li>
+                <li><a class="dropdown-item lang-option" data-lang="es"><span class="flag-icon flag-icon-es"></span></a></li>
+                <li><a class="dropdown-item lang-option" data-lang="ru"><span class="flag-icon flag-icon-ru"></span></a></li>
+                <li><a class="dropdown-item lang-option" data-lang="uk"><span class="flag-icon flag-icon-ua"></span></a></li>
+            </ul>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">

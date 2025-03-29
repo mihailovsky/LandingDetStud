@@ -1,106 +1,87 @@
-/* General Styles */
+/* GENERAL STYLES */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
+/* HEADER */
 .header {
-    background: #222;
+    background: black;
     color: white;
     padding: 15px 0;
-}
-
-/* Hero Section */
-.hero {
     text-align: center;
-    padding: 60px 20px;
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: white;
 }
 
-/* Tabs */
+/* TRANSPARENT LANGUAGE DROPDOWN */
+.lang-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    min-width: 50px;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.flag-icon {
+    font-size: 24px;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* TABS */
 .nav-tabs .nav-link {
-    color: #333;
+    background: #ddd;
+    color: black;
 }
 
 .nav-tabs .nav-link.active {
-    background: #007bff;
+    background: black;
     color: white;
 }
 
-/* Social Media */
-.social-media {
+/* SOCIAL MEDIA ICONS */
+.footer {
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
+    background: black;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-icon {
     font-size: 24px;
     color: white;
-    background: #333;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 0 10px;
     transition: 0.3s;
 }
 
 .social-icon:hover {
-    background: #007bff;
+    color: #ccc;
 }
 
-
-/* Transparent Dropdown */
-.lang-btn {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-    background: rgba(0, 0, 0, 0.8); /* Transparent black */
-    border: none;
-    min-width: 50px;
-}
-
-/* Dropdown items (flags only) */
-.dropdown-item {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-/* Flag icons */
-.flag-icon {
-    font-size: 24px;
-}
-
-/* Hover effect */
-.dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Mobile Adjustments */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    .hero h2 {
-        font-size: 2rem;
+    .container {
+        padding: 10px;
     }
 
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-    }
-
-    .nav-tabs {
-        flex-wrap: wrap;
+    .nav-tabs .nav-link {
+        font-size: 14px;
     }
 }

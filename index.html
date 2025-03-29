@@ -4,93 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">Auto Detailing Studio</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- FontAwesome for social icons -->
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/css/flag-icon.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-    <!-- Header -->
-<header class="header">
-    <div class="container d-flex justify-content-between align-items-center">
-        <h1 data-i18n="header_title">Auto Detailing Studio</h1>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 data-i18n="header_title">Auto Detailing Studio</h1>
 
-        <!-- Language Dropdown -->
-        <div class="dropdown">
-            <button class="btn dropdown-toggle lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown">
-                <span class="flag-icon flag-icon-gb"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item lang-option" data-lang="en"><span class="flag-icon flag-icon-gb"></span></a></li>
-                <li><a class="dropdown-item lang-option" data-lang="es"><span class="flag-icon flag-icon-es"></span></a></li>
-                <li><a class="dropdown-item lang-option" data-lang="ru"><span class="flag-icon flag-icon-ru"></span></a></li>
-                <li><a class="dropdown-item lang-option" data-lang="uk"><span class="flag-icon flag-icon-ua"></span></a></li>
-            </ul>
+            <!-- Language Dropdown -->
+            <div class="dropdown">
+                <button class="btn dropdown-toggle lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                    <span class="flag-icon flag-icon-gb"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item lang-option" data-lang="en"><span class="flag-icon flag-icon-gb"></span></a></li>
+                    <li><a class="dropdown-item lang-option" data-lang="ru"><span class="flag-icon flag-icon-ru"></span></a></li>
+                    <li><a class="dropdown-item lang-option" data-lang="uk"><span class="flag-icon flag-icon-ua"></span></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container text-center">
-            <h2 data-i18n="hero_title">Premium Auto Detailing Services</h2>
-            <p data-i18n="hero_desc">We provide high-quality detailing for all types of vehicles.</p>
-            <button class="btn btn-primary btn-lg" data-i18n="hero_cta">Book Now</button>
-        </div>
-    </section>
-
-    <!-- Services Tabs -->
-    <section class="services container">
-        <h2 class="text-center mt-4" data-i18n="services_title">Our Services</h2>
-        <ul class="nav nav-tabs" id="serviceTabs">
-            <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#exterior" data-i18n="tab1">Exterior</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#interior" data-i18n="tab2">Interior</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#ceramic" data-i18n="tab3">Ceramic Coating</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#paint" data-i18n="tab4">Paint Protection</a>
-            </li>
+    <!-- SERVICES SECTION -->
+    <section class="container">
+        <ul class="nav nav-tabs" id="servicesTab">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#service1" data-i18n="service1">Exterior Cleaning</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#service2" data-i18n="service2">Interior Detailing</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#service3" data-i18n="service3">Paint Protection</a></li>
         </ul>
-
-        <div class="tab-content mt-3">
-            <div id="exterior" class="tab-pane fade show active">
-                <p data-i18n="service1_desc">Complete exterior detailing including wash, wax, and polishing.</p>
+        
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="service1">
+                <p data-i18n="service1_desc">Complete exterior wash, waxing, and polishing for a shining car.</p>
             </div>
-            <div id="interior" class="tab-pane fade">
-                <p data-i18n="service2_desc">Deep cleaning of seats, carpets, dashboard, and air vents.</p>
+            <div class="tab-pane fade" id="service2">
+                <p data-i18n="service2_desc">Deep cleaning of car interiors, including seats and dashboard.</p>
             </div>
-            <div id="ceramic" class="tab-pane fade">
-                <p data-i18n="service3_desc">Long-lasting ceramic coating to protect your car’s paint.</p>
-            </div>
-            <div id="paint" class="tab-pane fade">
-                <p data-i18n="service4_desc">Paint correction and scratch removal for a flawless look.</p>
+            <div class="tab-pane fade" id="service3">
+                <p data-i18n="service3_desc">High-quality ceramic coating to protect your paintwork.</p>
             </div>
         </div>
     </section>
 
-    <!-- Social Media Links -->
-    <section class="social-media">
-        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-    </section>
+    <!-- SOCIAL MEDIA LINKS -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
